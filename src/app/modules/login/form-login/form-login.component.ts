@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -8,7 +9,8 @@ import { LoginService } from '../login.service';
   styleUrls: ['./form-login.component.scss']
 })
 export class FormLoginComponent {
-  fb = inject(FormBuilder)
+  private fb = inject(FormBuilder)
+  private router = inject(Router)
   loginService = inject(LoginService)
 
   hide = true
@@ -22,6 +24,9 @@ export class FormLoginComponent {
 
     if(usuario && senha)
     this.loginService.login(usuario, senha)
-      .subscribe(v => console.log('logou:', v))
+      .subscribe({
+        next: () => this.router.navigate(['/tickets']),
+        error: (e) => console.log('login error:', e)
+      })
   }
 }

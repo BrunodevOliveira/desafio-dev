@@ -13,6 +13,9 @@
       <mat-label>Usuário</mat-label>
       <input matInput placeholder="Usuário" formControlName="usuario" />
       <mat-icon matPrefix>account_circle</mat-icon>
+      <mat-error *ngIf="login.controls.usuario.hasError('required')">
+        Campo obrigatório
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field>
@@ -27,6 +30,10 @@
       <mat-icon matSuffix (click)="hide = !hide">{{
         hide ? "visibility_off" : "visibility"
       }}</mat-icon>
+
+      <mat-error *ngIf="login.controls.usuario.hasError('required')">
+        Campo obrigatório
+      </mat-error>
     </mat-form-field>
 
     <button

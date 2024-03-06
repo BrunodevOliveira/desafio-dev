@@ -1,0 +1,41 @@
+<div class="container-form">
+  <form class="content-form" [formGroup]="login" (ngSubmit)="submit()">
+    <figure>
+      <img src="/assets/logo.png" alt="Logo " />
+    </figure>
+
+    <div class="saldacao">
+      <h2>Bem-vindo!</h2>
+      <p>Realize o login para acessar o sistema</p>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Usuário</mat-label>
+      <input matInput placeholder="Usuário" formControlName="usuario" />
+      <mat-icon matPrefix>account_circle</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-icon matPrefix>lock</mat-icon>
+      <mat-label>Senha</mat-label>
+      <input
+        matInput
+        placeholder="Senha"
+        [type]="hide ? 'password' : 'text'"
+        formControlName="senha"
+      />
+      <mat-icon matSuffix (click)="hide = !hide">{{
+        hide ? "visibility_off" : "visibility"
+      }}</mat-icon>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="login.invalid"
+    >
+      Submit
+    </button>
+  </form>
+</div>

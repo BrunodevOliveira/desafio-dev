@@ -40,7 +40,6 @@ export class TableTicketsComponent implements AfterViewInit {
   }
 
   viewDetails(ticket: Ticket) {
-    console.log('Visualizando detalhes do ticket:', ticket);
     this.dialog.open(TicketDetailsComponent, {
       width: '600px',
       data: ticket,

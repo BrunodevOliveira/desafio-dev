@@ -1,8 +1,10 @@
-import { AfterViewInit, Component, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, ViewChild, inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Ticket } from 'src/app/models/tickets.interface';
+import { TicketDetailsComponent } from '../ticket-details/ticket-details.component';
 
 @Component({
   selector: 'app-table-tickets',
@@ -10,6 +12,8 @@ import { Ticket } from 'src/app/models/tickets.interface';
   styleUrls: ['./table-tickets.component.scss'],
 })
 export class TableTicketsComponent implements AfterViewInit {
+  dialog = inject(MatDialog)
+
   displayedColumns: string[] = [
     'situacao',
     'prioridade',
@@ -35,8 +39,15 @@ export class TableTicketsComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  viewDetails(row: Ticket) {
-    console.log('Visualizando detalhes do ticket:', row);
+  viewDetails(ticket: Ticket) {
+    console.log('Visualizando detalhes do ticket:', ticket);
+    this.dialog.open(TicketDetailsComponent, {
+      width: '600px',
+      data: ticket,
+      enterAnimationDuration: '500ms',
+      exitAnimationDuration: '200ms'
+   });
+
   }
 
   applyFilter(event: Event) {

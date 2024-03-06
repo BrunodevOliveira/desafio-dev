@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/login/login.module')
   },
   {
+    path: 'tickets' ,
+    loadChildren: () => import('./modules/tickets/tickets.module')
+  },
+  {
     path: '**',
     redirectTo: 'login'
   }

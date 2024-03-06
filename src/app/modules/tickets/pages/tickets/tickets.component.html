@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Tickets</h1>
+  <mat-divider />
+  <ng-container *ngIf="tickets?.length">
+    <app-table-tickets [tickets]="tickets"/>
+  </ng-container>
+</div>

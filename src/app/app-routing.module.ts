@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { isAuthenticatedGuard } from './guards/is-authenticated.guard';
 
 const routes: Routes = [
   {
@@ -8,6 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'tickets' ,
+    canActivate: [isAuthenticatedGuard],
     loadChildren: () => import('./modules/tickets/tickets.module')
   },
   {

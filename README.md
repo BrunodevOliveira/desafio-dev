@@ -45,8 +45,11 @@
 
 > ## Layout 🎨
 <div align="center">
-  <img src="https://github.com/BrunodevOliveira/desafio-dev/assets/85235164/c2ca5ef0-2ae2-4740-962a-91d231cc26c8" />
+  <img src="https://github.com/BrunodevOliveira/desafio-dev/assets/85235164/3fd18a67-80bc-457b-b6ac-9c63ef28b6af" />
 </div>
+
+> ## Link para o site 💻
+> https://desafio-central-it.vercel.app
 
 <br>
 <br>

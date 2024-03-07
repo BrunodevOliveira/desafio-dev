@@ -1,27 +1,60 @@
-# DesafioDev
+<p align="center">
+<img  src="https://centralit.com.br/wp-content/uploads/2022/02/logotipo-e1645043197751.png" width="400"/>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+<h1 align="center">Desafio técnico</h1>
 
-## Development server
+<br>
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+> ## Sobre o Projeto 🔎
 
-## Code scaffolding
+> Implementação desenvolvida como teste técnico para vaga de desenvolvedor Front-end Angular na Central IT consumindo informações através da API ``https://gsm-hmg.centralitcloud.com.br``
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Etapas 🪜
 
-## Build
+### Requisítos a serem avaliados 🎯
+- [x] Uso e manipulação de dados;
+- [x] Layout e usabilidade;
+- [x] Estrutura e organização do código;
+- [x] Utilização de expressões e campos condicionais;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Features ✨
+- [x] Paginação dos itens apresentados na tabela;
+- [x] Campo de pesquisa de tickets;
+- [x] Spinner de Loading para página de tickets;
+- [x] Interceptors para validação de token;
+- [x] Guardas de rota;
+<br>
+<br>
 
-## Running unit tests
+> ## Tecnologias Utilizadas 🧰
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<p>
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" height="27"/> 
+<img align="left" align="left" alt="git" src="https://img.shields.io/badge/Material-ffa725?logo=angular&logoColor=white" height="27"/> 
+  
+</p>  
 
-## Running end-to-end tests
+<br> 
+<br>
+<br>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+> ## Layout 🎨
+<div align="center">
+  <img src="https://github.com/BrunodevOliveira/desafio-dev/assets/85235164/c2ca5ef0-2ae2-4740-962a-91d231cc26c8" />
+</div>
 
-## Further help
+<br>
+<br>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> ## Instalação 🎛️
+1) Abra o terminal e digite:
+``git clone https://github.com/BrunodevOliveira/desafio-dev.git``
+2) Abra o terminal na pasta da aplicação clonada e digite:
+``npm install``
+3) Após concluir as instalações, digite este comando para que a aplicação abra automaticamente em seu navegador padrão:
+``ng serve -o``

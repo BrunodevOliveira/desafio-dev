@@ -1,0 +1,22 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+figure {
+  max-width: 150px;
+  margin: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.usuario-logado {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .usuario-nome {
+    font-size: 14px;
+  }
+}

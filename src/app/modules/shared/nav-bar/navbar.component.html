@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <figure>
+    <img src="/assets/logo.png" alt="Logo " />
+  </figure>
+
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="usuario-logado"
+    aria-label="Example icon-button with heart icon"
+    *ngIf="usuarioLogado$ | async as usuario"
+  >
+    <mat-icon>account_circle</mat-icon>
+    <span class="usuario-nome">{{usuario}}</span>
+  </button>
+
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="logout icon-button with share icon"
+    *ngIf="usuarioLogado$ | async as usuario; else logout"
+    (click)="handleLogin()"
+
+  >
+    <mat-icon>logout</mat-icon>
+  </button>
+
+  <ng-template #logout>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="login icon-button with share icon"
+    >
+      <mat-icon>login</mat-icon>
+    </button>
+  </ng-template>
+</mat-toolbar>

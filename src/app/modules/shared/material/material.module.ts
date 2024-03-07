@@ -13,6 +13,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRadioModule } from "@angular/material/radio";
 import { MatSelectModule } from "@angular/material/select";
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -38,7 +39,8 @@ const modules = [
   MatSidenavModule,
   MatDividerModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatProgressSpinnerModule
 ]
 
 @NgModule({

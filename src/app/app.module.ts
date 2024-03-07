@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { NavBarModule } from './modules/shared/nav-bar/nav-bar.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NavBarModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

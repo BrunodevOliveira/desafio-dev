@@ -1,0 +1,25 @@
+.ListEmpty {
+  padding: 24px 24px;
+  width: 100%;
+
+  .ListEmpty_Icon {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .mat-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 60px;
+    }
+  }
+
+  .ListEmpty_Text {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #aaa;
+    text-align: center;
+    width: 100%;
+  }
+}

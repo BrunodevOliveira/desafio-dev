@@ -6,4 +6,8 @@
   <ng-container *ngIf="isLoading">
     <mat-spinner />
   </ng-container>
+
+  <ng-container *ngIf="error">
+    <app-not-found [mensagem]="error"/>
+  </ng-container>
 </div>

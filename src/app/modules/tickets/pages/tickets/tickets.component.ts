@@ -10,9 +10,15 @@ import { TicketsService } from '../../tickets.service';
 export class TicketsComponent implements OnInit  {
   ticketsService = inject(TicketsService)
   tickets!: Ticket[]
+  isLoading = false
 
   ngOnInit(): void {
-    this.ticketsService.getTickets().subscribe(({ result }) => this.tickets = result)
+    this.isLoading = true
+    this.ticketsService.getTickets()
+      .subscribe({
+        next: ({ result }) => this.tickets = result,
+        complete: () => this.isLoading = false
+      })
   }
 
 }

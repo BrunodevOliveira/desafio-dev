@@ -1,7 +1,9 @@
 <div class="container">
   <h1>Tickets</h1>
   <mat-divider />
-  <ng-container *ngIf="tickets?.length">
-    <app-table-tickets [tickets]="tickets"/>
+  <app-table-tickets *ngIf="tickets?.length" [tickets]="tickets"/>
+
+  <ng-container *ngIf="isLoading">
+    <mat-spinner />
   </ng-container>
 </div>

@@ -1,7 +1,7 @@
 :host {
   display: block;
   width: 90%;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   margin: 0 auto;
   padding: 20px  40px;
   box-sizing: border-box;
@@ -10,4 +10,11 @@
 
 mat-divider {
   margin-block: 26px;
+}
+
+mat-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

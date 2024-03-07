@@ -41,7 +41,11 @@ export class TableTicketsComponent implements AfterViewInit {
 
   viewDetails(ticket: Ticket) {
     this.dialog.open(TicketDetailsComponent, {
-      width: '600px',
+      // width: '600px',
+      width: window.innerWidth < 600 ? '100vw' : '600px',
+      height: window.innerWidth < 600 ? '100vh' : 'normal',
+      maxWidth: window.innerWidth < 600 ? '100%' : 'normal',
+      maxHeight: window.innerWidth < 600 ? '100%' : 'normal',
       data: ticket,
       enterAnimationDuration: '500ms',
       exitAnimationDuration: '200ms'

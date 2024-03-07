@@ -1,44 +1,52 @@
 <h2 mat-dialog-title>Detalhes do Ticket</h2>
-<mat-dialog-content>
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{ data.Atividade }}</mat-card-title>
-      <mat-card-subtitle>{{
-        data.data_solicitacao | date : "dd/MM/yyyy HH:mm:ss"
-      }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p *ngIf="data?.Usuario">
-        <strong class="label">Usuário:</strong> {{ data.Usuario | titlecase}}
-      </p>
-      <p *ngIf="data?.Contrato">
-        <strong class="label">Contrato:</strong> {{ data.Contrato }}
-      </p>
-      <p *ngIf="data?.situacao">
-        <strong class="label">Situação:</strong> {{ data.situacao }}
-      </p>
-      <p *ngIf="data?.tipoDemanda">
-        <strong class="label">Tipo da demanda:</strong> {{ data.tipoDemanda }}
-      </p>
-      <p *ngIf="data?.analise">
-        <strong class="label">Análise:</strong> {{ data.analise | titlecase }}
-      </p>
-      <p *ngIf="data?.Servico">
-        <strong class="label">Serviço:</strong> {{ data.Servico }}
-      </p>
-      <p *ngIf="data?.Responsavel">
-        <strong class="label">Responsável:</strong> {{ data.Responsavel }}
-      </p>
-      <p *ngIf="data?.OrigemAtendimento">
-        <strong class="label">Origem de atendimento:</strong>
-        {{ data.OrigemAtendimento }}
-      </p>
-      <p *ngIf="data?.Contrato">
-        <strong class="label">Contrato:</strong> {{ data.Contrato }}
-      </p>
-    </mat-card-content>
-  </mat-card>
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-raised-button mat-dialog-close color="warn">Fechar</button>
-</mat-dialog-actions>
+<div class="ticket-container">
+  <mat-dialog-content>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ data.Atividade }}</mat-card-title>
+        <mat-card-subtitle>{{
+          data.data_solicitacao | date : "dd/MM/yyyy HH:mm:ss"
+        }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p *ngIf="data?.Usuario">
+          <strong class="label">Usuário:</strong> {{ data.Usuario | titlecase}}
+        </p>
+        <p *ngIf="data?.Contrato">
+          <strong class="label">Contrato:</strong> {{ data.Contrato }}
+        </p>
+        <p *ngIf="data?.idprioridade">
+          <strong class="label">Prioridade:</strong> {{ data.idprioridade }}
+        </p>
+        <p *ngIf="data?.situacao">
+          <strong class="label">Situação:</strong> {{ data.situacao }}
+        </p>
+        <p *ngIf="data?.nota">
+          <strong class="label">Nota:</strong> {{ data.nota }}
+        </p>
+        <p *ngIf="data?.tipoDemanda">
+          <strong class="label">Tipo da demanda:</strong> {{ data.tipoDemanda }}
+        </p>
+        <p *ngIf="data?.analise && data?.analise !== 'null'">
+          <strong class="label">Análise:</strong> {{ data.analise | titlecase }}
+        </p>
+        <p *ngIf="data?.Servico">
+          <strong class="label">Serviço:</strong> {{ data.Servico }}
+        </p>
+        <p *ngIf="data?.Responsavel">
+          <strong class="label">Responsável:</strong> {{ data.Responsavel }}
+        </p>
+        <p *ngIf="data?.OrigemAtendimento">
+          <strong class="label">Origem de atendimento:</strong>
+          {{ data.OrigemAtendimento }}
+        </p>
+
+
+      </mat-card-content>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="warn">Fechar</button>
+  </mat-dialog-actions>
+
+</div>

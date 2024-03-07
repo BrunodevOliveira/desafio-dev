@@ -1,5 +1,22 @@
+:host {
+  display: block;
+}
+
 .label {
   color: #35948a;
   font-weight: 500;
   // display: block;
+}
+
+@media (max-width: 400px) {
+  .ticket-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 74px);
+    justify-content: space-around;
+  }
+
+  ::ng-deep mat-dialog-actions .mdc-button {
+    width: 100%;
+  }
 }

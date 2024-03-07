@@ -27,3 +27,13 @@ figure {
   box-shadow: none !important;
   border: 1px solid red;
 }
+
+@media(max-width: 400px) {
+  figure {
+    max-width: 130px;
+  }
+
+  .usuario-logado {
+    display: none;
+  }
+}

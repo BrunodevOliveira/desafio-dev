@@ -4,15 +4,11 @@
   </figure>
 
   <span class="example-spacer"></span>
-  <button
-    mat-icon-button
-    class="usuario-logado"
-    aria-label="Example icon-button with heart icon"
-    *ngIf="usuarioLogado$ | async as usuario"
-  >
+
+  <div class="usuario-logado" *ngIf="usuarioLogado$ | async as usuario">
     <mat-icon>account_circle</mat-icon>
     <span class="usuario-nome">{{usuario}}</span>
-  </button>
+  </div>
 
   <button
     mat-icon-button

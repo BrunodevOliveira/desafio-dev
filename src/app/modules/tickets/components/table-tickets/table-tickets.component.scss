@@ -1,3 +1,8 @@
+:host {
+  width: 100%;
+  display: block;
+}
+
 table {
   width: 100%;
 }
@@ -5,4 +10,21 @@ table {
 .mat-mdc-form-field {
   font-size: 14px;
   width: 30%;
+}
+
+@media (max-width: 740px) {
+  table .hiden-column {
+    display: none;
+  }
+}
+
+@media (max-width: 630px) {
+  table .hiden-column-prioridade {
+    display: none;
+  }
+
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
 }

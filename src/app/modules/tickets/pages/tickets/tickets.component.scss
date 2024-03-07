@@ -6,6 +6,11 @@
   padding: 20px  40px;
   box-sizing: border-box;
   background-color: #f4f4f4;
+
+  @media (max-width: 900px) {
+    width: auto;
+    padding: 0
+  }
 }
 
 mat-divider {

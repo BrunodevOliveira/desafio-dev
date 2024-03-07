@@ -20,7 +20,6 @@ export class TicketsComponent implements OnInit  {
         next: ({ result }) => this.tickets = result,
         complete: () => this.isLoading = false,
         error: (e) => {
-          console.error('Error aqui', e)
           this.isLoading = false
           this.error = 'Não foi possível exibir os tickets no momento. Tente novamente mais tarde.'
         }

@@ -18,7 +18,6 @@ export class AuthInterceptor implements HttpInterceptor {
     if (token) {
       const decodedToken: any = jwtDecode(token);
       const currentTime = Date.now() / 1000;
-      console.log('Token expirado?', decodedToken.exp < currentTime)
 
       if (decodedToken.exp < currentTime) {
         localStorage.removeItem('token');
